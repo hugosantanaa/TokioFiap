@@ -1,0 +1,57 @@
+package logica.exercicios.aula06;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio11 {
+
+	public static void main(String[] args) {
+		
+		int codOrigem = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o código do estado da carga :\n"
+				+ "1)SP - São Paulo\n"
+				+ "2)RJ - Rio de Janeiro\n"
+				+ "3)DF - Distrito Federal\n"
+				+ "4)CE - Ceará\n"
+				+ "5)ES - Espírito Santo"));
+		
+		double peso = Double.parseDouble(JOptionPane.showInputDialog(null,"Digite o peso da carga em toneladas :"));
+		int codCarga = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o código da carga (10 à 40) :"));
+		peso = peso*1000;
+		
+		
+		switch(codOrigem) {
+		case 1:
+			if(codCarga >=10 && codCarga <=20) {
+				float precoCarga = (float) ((peso*100)*35);
+				JOptionPane.showMessageDialog(null, String.format("O valor total transportado pela carga é: R$%.2f",precoCarga));
+				
+			}else if (codCarga >20 && codCarga <=30){
+				float precoCarga = (float) ((peso*250)*35);
+				JOptionPane.showMessageDialog(null, String.format("O valor total transportado pela carga é: R$%.2f",precoCarga));
+			}else if(codCarga >30 && codCarga <=40) {
+				float precoCarga = (float) ((peso*340)*35);
+				JOptionPane.showMessageDialog(null, String.format("O valor total transportado pela carga é: R$%.2f",precoCarga));
+			}else {
+				JOptionPane.showMessageDialog(null, "Código da carga inválido");
+			}
+		}
+		
+		/*if(codCarga >= 10 && codCarga <= 20) {
+			JOptionPane.showMessageDialog(null,"O valor da carga é: R$"+peso*100);
+			
+		}else if(codCarga >20 && codCarga <=30) {
+			JOptionPane.showMessageDialog(null,"O valor da carga é: R$"+peso*250);
+			
+		}else if(codCarga >31 && codCarga <=40) {
+			JOptionPane.showMessageDialog(null,"O valor da carga é: R$"+peso*340);
+		}else{
+			JOptionPane.showMessageDialog(null,"Opção Inválida");
+		}
+	*/
+	
+	
+	
+	
+	
+	}
+
+}
