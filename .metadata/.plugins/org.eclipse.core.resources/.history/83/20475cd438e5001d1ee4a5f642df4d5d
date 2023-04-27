@@ -1,0 +1,14 @@
+package logica.exercicios.aula08;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio03 {
+
+	public static void main(String[] args) {
+		
+		String text = JOptionPane.showInputDialog(null,"Digite uma frase");
+		
+		
+	}
+
+}

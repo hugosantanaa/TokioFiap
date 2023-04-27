@@ -1,0 +1,21 @@
+package logica.exercicios.aula07;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio09 {
+
+	public static void main(String[] args) {
+		
+		int num;
+		
+		do {
+			 num = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um número inteiro positivo"));
+		}while(num<0);
+		for(int i=1; i<=num; i++) {
+			if(num % i ==0) {
+				JOptionPane.showMessageDialog(null, "Os números divisores de "+num+ "São \n"+i);
+			}
+		}
+	}
+
+}
