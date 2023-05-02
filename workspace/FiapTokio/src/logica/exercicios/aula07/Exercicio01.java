@@ -9,10 +9,7 @@ public class Exercicio01 {
 		String s = "Olá Mundo";
 		int vezes =  Integer.parseInt(JOptionPane.showInputDialog(null,"Digite quantas vezes deseja repetir a mensagem"));
 		
-		for (int i=1; i<=vezes;i++) {
-			System.out.println(s);
-
-		}
+		
 	}
 
 }
